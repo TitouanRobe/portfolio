@@ -1,0 +1,693 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5em;
+}
+
+/* Polices */
+
+@font-face {
+font-family: Dosis;
+src: url(../polices/Dosis-VariableFont_wght.ttf);
+}
+
+@font-face {
+font-family: Montserrat;
+src: url(../polices/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Tommy;
+  src: url(../polices/MADE\ Tommy\ Soft\ ExtraBold\ PERSONAL\ USE.otf);
+}
+
+/* Balises communes */
+
+h3
+{
+  font-family: Montserrat;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* carré sous chaque titre de article */
+h3+span
+{
+  border: 2px solid #00a6fb;
+  width: 200px;
+  height: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* barre de navigation */
+
+nav /* position fixe pour la barre de navigation */
+{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 1s ease-out;
+  z-index: 2;
+}
+
+.anim-nav  /* animation de nav */
+{
+  background-color: #000;
+  color: #00a6fb;
+  border-bottom: 2px solid #00a6fb;
+}
+
+nav ul /* Liste des Liens */
+{
+  margin: 0;
+  padding: 10px 0;
+  text-align : center;
+}
+
+nav li 
+{
+  display: inline-block;
+  padding : 0 10px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+nav li a /* liens de la liste */
+{
+    display: block;
+    color: #00a6fb;
+    padding: 14px 30px;
+    text-decoration: none;
+    /*border: 1px solid rgb(6, 180, 234); à définir */
+    border-radius: 25px;
+}
+
+nav li a:hover 
+{
+    color : #000;
+    transition: 0.5s;
+}
+
+.anim-liens /* classe ajouté a nav quand le scroll depasse 400 */
+{
+  color: #fff;
+}
+.anim-liens:hover
+{
+  color: #00a6fb;
+}
+
+nav hr
+{
+  border: 1px solid #00a6fb;
+}
+
+.close /* croix pour la fermeture du burger */
+{
+  display: none;
+}
+
+/* header */
+
+h1
+{
+  font-size: 4vw;
+  color: #000;
+  font-family: Tommy;
+  letter-spacing: 5px;
+  font-style: italic;
+  padding: 60px 0 10px 0;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+h1 div
+{
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Lignes sous le titre */
+
+.lignes
+{
+  position: absolute;
+  left: 60px;
+  z-index: -1;
+}
+.l1
+{
+  width: 26vw;
+  height: 3px;
+  background-color: #00a6fb;
+  border-radius: 5px;
+}
+
+.l2
+{
+  width: 23vw;
+  height: 3px;
+  background-color: #00a6fb;
+  border-radius: 5px;
+  position: relative;
+  top: 10px;
+}
+
+h2
+{
+  font-family: Dosis;
+  font-size: 2vw;
+  position: relative;
+  margin-left: 60px;
+  top: 50px;
+}
+
+header  img
+{
+  width: 100%;
+  margin-top: 75px;
+}
+
+/* paragraphe mon profil */
+
+#mon_profil
+{
+  background-color: #000;
+  color: #fff;
+  margin-top: -4px;
+  margin-bottom: -10px;
+}
+
+#mon_profil span
+{
+  background-color: #fff;
+  border: 2px solid #00a6fb;
+  margin-bottom: 20px;
+}
+
+#mon_profil div
+{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#mon_profil article /* paragraphe de présentation */
+{
+  border: 2px solid #00a6fb;
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  font-family: Dosis;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 700px;
+  text-align: right;
+}
+
+/* titres du paragraphe */
+
+#mon_profil h4
+{
+  font-size: 2em;
+  padding: 10px 0;
+  text-align: left;
+}
+
+#mon_profil h5
+{
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/* paragraphe */
+
+#mon_profil article p
+{
+  line-height: 1.4em;
+  text-align: justify;
+}
+
+
+#mon_profil img /* image de profil */
+{
+  border: 2px solid #00a6fb;
+  border-radius: 20px;
+}
+
+#mon_profil figure /* case lien cv */
+{
+  border: 1px solid #000;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 7px;
+}
+
+#mon_profil figcaption /* CV */
+{
+  display: inline-block;
+  font-size: 1.3em;
+  margin: 0 5px;
+}
+
+#mon_profil a /* icone de téléchargement */
+{
+  color: #000;
+}
+
+#mon_profil a:hover
+{
+  color: #00a6fb;
+}
+
+/*Paragraphes compétences */
+
+#mes_competences 
+{
+  padding: 10px 40px;
+}
+
+#mes_competences span
+{
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+#mes_competences img /* Logo de chaque compétence */
+{
+  width: 100px;
+  height: 100px;
+}
+
+#mes_competences hr
+{
+  border: #000 solid 1px;
+  border-radius: 5px;
+}
+
+#mes_competences h4
+{
+  text-align: center;
+  font-family: Montserrat;
+  color: #00a6fb;
+  font-size: 1.5em;
+  padding: 30px 0;
+}
+
+#mes_competences .icones /* Alignement des icones  de logos */
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+#mes_competences .icones figure
+{
+  margin: 20px 0;  
+}
+
+#mes_competences figcaption
+{
+  text-align: center;
+  color: #00a6fb;
+  font-family: Montserrat;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+/* paragraphe mon parcours*/
+
+#mon_parcours
+{
+  font-family: Dosis;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.timeline /* conteneur de la timeline */
+{
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+  position: relative;
+  padding-top: 80px;
+}
+
+.verticale /* Ligne verticale de parcours */
+{
+  height: 600px;
+  width: 5px;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+.rond /* ronds */
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: #00a6fb 2px solid;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.r1
+{
+  top: 80px;
+}
+
+.r2
+{
+  top: 280px;
+}
+
+.r3
+{
+  top: 480px;
+}
+
+.r4
+{
+  top: 680px;
+}
+
+.box /* conteneur de chaque boite */
+{
+  width: 400px;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.b1
+{
+  top: 80px;
+  left: calc(50% - 270px);
+}
+
+.b2
+{
+  top: 280px;
+  left: calc(50% + 270px);
+}
+
+.b3
+{
+  top:480px;
+  left: calc(50% - 270px);
+}
+
+.b2 li
+{
+  padding: 3px 0;
+}
+
+.b2 ul
+{
+  list-style-type: none;
+}
+
+#mon_parcours h4
+{
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  color: #00a6fb;
+}
+
+#mon_parcours i
+{
+  margin: 0 10px;
+}
+
+#mon_parcours a
+{
+  text-decoration: none;
+  color: #000;
+}
+
+#mon_parcours a:hover
+{
+  color: #00a6fb;
+}
+
+.btn 
+{
+  display: block;
+  border: 2px solid #00a6fb;
+  background-color: #fff;
+  color: #00a6fb;
+  border-radius: 8px;
+  font-family: Montserrat;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 10px;
+  width: 120px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.btn:hover
+{
+  color: #fff;
+  background-color: #00a6fb;
+  border: 2px solid #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Paragraphe mes Projets */
+
+#mes_projets
+{
+  background-color: #00a6fb;
+  margin: 70px 0 20px 0;
+}
+
+#mes_projets span
+{
+  border: #000 2px solid;
+  background-color: #fff;
+}
+
+#mes_projets div /* alignements des 4 projets */ 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+#mes_projets article
+{
+  margin: 20px 100px;
+}
+
+#mes_projets img
+{
+  border: 2px solid #000;
+}
+
+#mes_projets h4
+{
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+
+/* fenêtres modales */
+
+.modal-container, .modal-container2, .modal-container3, .modal-container4/* conteneur de la fenêtre modale */
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden; /* élément caché */
+    transition: visibility 0.4s; /* transition s'applique à la propriété visibility, durée de la transition: 0.4s */
+    z-index: 3;
+}
+
+.modal-container.active, .modal-container2.active, .modal-container3.active, .modal-container4.active /* quand la fenêtre modale est activée */
+{
+    visibility: visible; 
+}
+
+.overlay, .overlay2, .overlay3, .overlay4 /* fond de la fenêtre modale */
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333333d3;
+    opacity: 0;
+    transition: opacity 0.4s 0.2s ease-out;
+    /* transition sur l'opacité de 0.4s, 0.2s de délai et ease in out : transition lente à la fin */
+}
+
+.modal-container.active .overlay, .modal-container2.active .overlay2, .modal-container3.active .overlay3, .modal-container4.active .overlay4 /* overlay quand la fenêtre modale est activée */
+{
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+    /* quand on active la fenêtre, passage de l'opacité à 1 et 0.4s de transition en ease-out */
+}
+
+.modal, .modal2, .modal3, .modal4 /* fenêtre modale */
+{
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #00a6fb;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* permet de centrer les éléments en position absolue */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal-container.active .modal, .modal-container2.active .modal2, .modal-container3.active .modal3, .modal-container4.active .modal4 /* fenêtre modale activée */
+{
+    opacity: 1;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.close-modal, .close-modal2, .close-modal3, .close-modal4 /* bouton pour fermer la fenêtre modale */
+{
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer; /* montre à l'utilisateur que le bouton est cliquable */
+    background-color: #000;
+    color: #00a6fb;
+}
+
+/* Design des fenêtres modales */
+
+.modal article p, .modal2 article p, .modal3 article p, .modal4 article p 
+{
+    line-height: 1.4;
+    text-align: justify;
+    font-family: Dosis;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    width: 480px;
+}
+
+.modal h4, .modal2 h4, .modal3 h4, .modal4 h4
+{
+    color: #000;
+    font-family: Montserrat;
+}
+
+.modal h5, .modal2 h5, .modal3 h5, .modal4 h5
+{
+    font-family: Dosis;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.modal aside p, .modal2 aside p, .modal3 aside p, .modal4 aside p
+{
+    color: #fff;
+    font-size: 1.3em;
+    font-family: Dosis;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.modal img, .modal2 img, .modal3 img, .modal4 img
+{
+  margin: 10px;
+}
+
+/* footer */
+
+footer
+{
+  background-color: #000;
+  padding-bottom: 20px;
+  text-align: center; /* permet de centrer le inline-block */
+}
+
+footer h3 /* contact */
+{
+  color: #00a6fb;
+  text-align: center;
+  font-size: 2em;
+  padding: 20px;
+  font-family: Montserrat;
+  font-weight: 800;
+}
+
+footer p
+{
+  color: white;
+  font-family: Dosis;
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+footer ul /* liste des icones */
+{
+  background: rgba(128, 128, 128, 0.05);
+  border-radius: 4em;
+  display: inline-block;
+  padding: 10px 20px;
+  /* style du rebond de l'icone message */
+  --fa-bounce-start-scale-x: 1; 
+  --fa-bounce-start-scale-y: 1; 
+  --fa-bounce-jump-scale-x: 1; 
+  --fa-bounce-jump-scale-y: 1; 
+  --fa-bounce-land-scale-x: 1; 
+  --fa-bounce-land-scale-y: 1; 
+  --fa-bounce-height: 1;
+}
+
+footer li
+{
+  display: inline-block;
+  margin: 0 15px;
+}
+
+footer a
+{
+  color: #00a6fb;
+}
+
+footer a:hover
+{
+  color: #fff;
+  transition: 0.5s;
+}
+

@@ -1,0 +1,145 @@
+@media  screen and (max-width: 850px)
+{
+  /* menu burger */
+
+  .burger-icon span /* image du burger */
+  {
+    display: block;
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #00a6fb;
+    margin: 5px 10px;
+  }
+
+  /*  btn close */
+  .side_nav .close 
+  {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  /* Sidenav menu */
+  .side_nav 
+  {
+    height: 100%;
+    width: 225px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -225px;
+    background-color: #000;
+    padding-top: 40px;
+    transition: left 0.5s ease;
+  }
+
+  /* Sidenav liens du menu */
+  .side_nav a 
+  {
+    text-decoration: none;
+    color: #00a6fb;
+    transition: 0.5s;
+  }
+
+  nav ul /* redéfinir l'alignement da la liste du burger */
+  {
+    text-align: left;
+  }
+
+  nav li a /* redéfinition des liens du burger */
+  {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 20px;
+  }
+
+  .side_nav a:hover {
+    color: rgb(13, 149, 190);
+  }
+
+  /* classe active */
+  .side_nav.active {
+    left: 0;
+  }
+
+  /* rétrecissement des lignes sous le titre */
+  .lignes .l1, .lignes .l2
+  {
+    height: 2px;
+    width: 200px;
+  }
+  .lignes .l2
+  {
+    top: 5px;
+    width: 180px;
+  }
+
+  /* h1 adapté aux petits écran */
+  h1
+  {
+      font-size: 1.5em;
+  }
+
+  h2 /* h2 adapté aux petits écrans */
+  {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  #mes_projets img /* redéfiniton des images pour des écrans plus petits */
+  {
+    width: 400px;
+    height: 223px;
+  }
+}
+
+@media screen and (max-width: 1100px) 
+{
+  #mon_profil img
+  {
+    display:none;
+  }
+
+  /* adaptation de la timeline pour les petits écrans */
+  .verticale 
+  {
+    display: none;
+  }
+
+  .rond
+  {
+    display: none;
+  }
+
+  .timeline .box
+  {
+    width: auto;
+    position: initial;
+    transform: none;
+    margin: 40px;
+    height: auto;
+  }
+
+  .timeline
+  {
+    height: auto;
+    padding-top: 20px;
+  }
+}
+
+/* adaptation des fenêtres modales aux petits écrans */
+@media screen and (max-width: 600px) 
+{
+    .modal, .modal2, .modal3, .modal4
+    {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .modal article p, .modal2 article p, .modal3 article p, .modal4 article p 
+    {
+        width: 400px;
+    }
+}
